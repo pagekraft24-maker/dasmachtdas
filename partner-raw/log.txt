@@ -1,0 +1,94 @@
+ERR svk-partner orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/06f701fe-c0a8-47d2-b381-4f87fa5adef7_svk-part
+OK svk-partner c0 1922 https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/ABlPqvJ4c6fGZBEgtoId/med
+OK svk-partner c1 16130 https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/ABlPqvJ4c6fGZBEgtoId/med
+OK svk-partner c2 170578 https://storage.googleapis.com/msgsndr/ABlPqvJ4c6fGZBEgtoId/media/6827952380f93eed77ae8baf.png
+ERR ergo-versicherung orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/0ea7dbb1-3209-473a-949b-b4f7a77763ca_2.png?v=
+OK ergo-versicherung c0 10421 https://assets.ergo.com/content/dam/ergo/grafiken/logos/ergo_logo.svg
+OK ergo-versicherung c1 10988 https://assets.ergo.com/content/dam/adhop/icons/ergo_logo.svg
+OK ergo-versicherung c2 3008 https://assets.ergo.com/content/dam/adhop/icons/DKV-Logo.svg
+OK ergo-versicherung c3 1816 https://assets.ergo.com/etc.clientlibs/ergo/adhop/page/clientlibs/assets/resources/icon-192x192.png
+OK ergo-versicherung c4 2531 https://assets.ergo.com/etc.clientlibs/ergo/adhop/page/clientlibs/assets/resources/apple-touch-icon-180x180.png
+ERR ergo-versicherung c5 HTTP Error 404: Not Found https://assets.ergo.com/etc.clientlibs/ergo/adhop/page/clientlibs/assets/resources/apple-touch-icon-167x167.png
+ERR resmart-group orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/ca5d4b61-e3cc-41a3-b335-3758bb4b0354_Resmart_
+OK resmart-group c0 5740 https://resmart-group.de/wp-content/uploads/2024/06/Resmart_Logo_wide_Final-1-removebg-preview-329x67.png
+OK resmart-group c1 10734 https://resmart-group.de/wp-content/uploads/2020/11/logo-1.svg
+OK resmart-group c2 8381 https://resmart-group.de/wp-content/uploads/2020/11/logo-2.svg
+OK resmart-group c3 6722 https://resmart-group.de/wp-content/uploads/2020/11/logo-3.svg
+OK resmart-group c4 6174 https://resmart-group.de/wp-content/uploads/2020/11/logo-4.svg
+OK resmart-group c5 217299 https://resmart-group.de/wp-content/uploads/2024/06/cropped-Bildschirmfoto_2024-06-08_um_19.25.27-removebg-preview.png
+ERR sbw-gmbh orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/29c1afbb-36e4-4e5e-8959-7f5efe418e65_1.png?v=
+NO sbw-gmbh c0 200 image/png https://sbwgmbh.de/wp-content/uploads/2020/01/Logoblank.png
+OK sbw-gmbh c1 1699 https://sbwgmbh.de/wp-content/uploads/2023/07/VSD_Logo2_trans.png
+OK sbw-gmbh c2 9540 https://sbwgmbh.de/wp-content/uploads/2019/12/Logo_immo.png
+OK sbw-gmbh c3 8190 https://sbwgmbh.de/wp-content/uploads/2019/12/box1_160x160.png
+OK sbw-gmbh c4 6217 https://sbwgmbh.de/wp-content/uploads/2019/12/Logo200.png
+ERR v-a-o orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/14f484bb-1af5-4ba2-b55c-fdb1c24d371a_3.png?v=
+OK v-a-o c0 18938 https://v-a-o.de/wp-content/uploads/2018/02/Logo_Web.png
+OK v-a-o c1 31341 https://v-a-o.de/wp-content/uploads/2022/01/DTK_Logo_BASIC_KANZLEI-2022-190x200.png
+OK v-a-o c2 6202 https://v-a-o.de/wp-content/uploads/2018/01/favicone.png
+OK v-a-o c3 1998 https://v-a-o.de/wp-content/uploads/2018/02/cropped-Logo_Web-1-32x32.png
+OK v-a-o c4 35327 https://v-a-o.de/wp-content/uploads/2018/02/cropped-Logo_Web-1-192x192.png
+OK v-a-o c5 32030 https://v-a-o.de/wp-content/uploads/2018/02/cropped-Logo_Web-1-180x180.png
+ERR sv-rot-1945 orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/ca3d3f7b-c8bb-4898-adf1-c2c5fec76e9e_kfz-sach
+OK sv-rot-1945 c0 5775 https://www.sv-rot-1945.de/_assets/5a56795a27aa7aad71469892be31aeb2/Images/100px-SV_Rot.svg.png
+OK sv-rot-1945 c1 5982 https://www.sv-rot-1945.de/_assets/5a56795a27aa7aad71469892be31aeb2/Icons/favicon.ico?1787385287
+ERR std-textildruck orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/237fb878-07a7-45a2-bb90-3066183e2e83_kfz-sach
+ERR tamam-design orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/858df8a8-7f4d-4477-9582-77e3a5221a88_kfz-sach
+ERR fix-reguliert orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/0a016666-a56e-40be-894a-0b0c5e8c9850_kfz-sach
+ERR ah-geiger orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/42a48b46-5e35-42d5-8a72-96d3e1d5dfc9_kfz-sach
+OK ah-geiger c0 28710 https://ah-geiger.de/assets/img/poster-hero.webp
+OK ah-geiger c1 261 https://ah-geiger.de/assets/img/favicon.svg
+ERR rechtsanwaltskanzlei-esslingen orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/9d8f73b3-f3b6-419b-a408-7cb760a1c372_kfz-sach
+OK rechtsanwaltskanzlei-esslingen c0 3978 https://www.rechtsanwaltskanzlei-esslingen.de/Templates/default/images/McGrip-Logo.jpg
+ERR steuerberater-louis orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/3e37e9a6-aca9-4484-810c-774925373d46_kfz-sach
+OK steuerberater-louis c0 43391 https://www.steuerberater-louis.de/wp-content/uploads/2021/02/steuerberater-hans-peter-louis-logo.png
+OK steuerberater-louis c1 253218 https://www.steuerberater-louis.de/wp-content/uploads/2021/03/steuerberater-hans-peter-louis-professioneller-service-fue
+ERR stickerplanet orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/7fff1aa1-054b-4f64-a9ba-54943582656c_kfz-sach
+ERR wipersoft orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/291a202c-fc9e-4688-ba62-c1e04fd892da_kfz-sach
+OK wipersoft c0 3661554 https://wipersoft.de/wp-content/uploads/2026/03/logo_animation.webp
+OK wipersoft c1 836264 https://wipersoft.de/wp-content/uploads/2026/03/Logo_Animation_Wipersoft-1.webp
+OK wipersoft c2 351807 https://wipersoft.de/wp-content/uploads/2025/12/28.11.2025_Gemini_Generated_Image-1024x798.png
+OK wipersoft c3 473 https://wipersoft.de/wp-content/uploads/2025/08/cropped-Favicon-32x32.png
+OK wipersoft c4 3199 https://wipersoft.de/wp-content/uploads/2025/08/cropped-Favicon-192x192.png
+OK wipersoft c5 2902 https://wipersoft.de/wp-content/uploads/2025/08/cropped-Favicon-180x180.png
+ERR rh-anwaltskanzlei orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/82c9591f-39ac-46f6-b11b-bbce17431194_kfz-sach
+OK rh-anwaltskanzlei c0 158880 https://images.squarespace-cdn.com/content/v1/60746461f9f03a1d7f6430ad/b350fa84-7609-45f1-aae7-8292d9b371c1/Desktophinte
+OK rh-anwaltskanzlei c1 158880 http://static1.squarespace.com/static/60746461f9f03a1d7f6430ad/t/6949eaa96e9e82575b729b75/1766451881437/Desktophintergru
+NO rh-anwaltskanzlei c2 200 text/plain https://assets.squarespace.com/universal/default-favicon.ico
+ERR emox-elektro orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/2042f5c8-ccd4-475b-9a6e-cc06c695b8fd_kfz-sach
+ERR emox-elektro c0 HTTP Error 404: Not Found https://emox-elektro.de/emox-elektro.de/wp-content/uploads/2024/11/GIRALOGO.jpg
+ERR emox-elektro c1 HTTP Error 404: Not Found https://emox-elektro.de/emox-elektro.de/wp-content/uploads/2024/11/Logo_Hager_2016_RGB.jpg
+ERR emox-elektro c2 HTTP Error 404: Not Found https://emox-elektro.de/emox-elektro.de/wp-content/uploads/2024/11/els-spelsberg-logo.png
+OK emox-elektro c3 1381 https://emox-elektro.de/wp-content/uploads/2024/10/Vector.png
+OK emox-elektro c4 1870 http://emox-elektro.de/wp-content/uploads/2024/11/cropped-favicon-32x32-1-32x32.png
+OK emox-elektro c5 11026 http://emox-elektro.de/wp-content/uploads/2024/11/cropped-favicon-32x32-1-192x192.png
+ERR rvr orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/1e2d9e6e-e285-4004-815c-7e3b159ca50e_kfz-sach
+OK rvr c0 7642 https://www.rvr.de/wp-content/uploads/RVR-Logo.svg
+OK rvr c1 5740 https://www.rvr.de/wp-content/uploads/rvr-logo_neu_RGB_white-1.svg
+OK rvr c2 1439 https://www.rvr.de/wp-content/uploads/RVR-Rechtsanwalte-Footer-Logo.png
+OK rvr c3 244184 https://www.rvr.de/wp-content/uploads/RVR-Stuttgart-Rechtsanwaelte-Headerbild.jpg
+OK rvr c4 7424 https://www.rvr.de/wp-content/uploads/RVR-Rechtsanwaelte-Logo-square-300x300.png
+ERR kanzlei-php orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/f09f8087-da4d-4505-8d16-b2b116f41e95_PHP_Logo
+OK kanzlei-php c0 1322 https://www.kanzlei-php.de/templates/inside-21/images/PHP_Logo_braun.svg
+OK kanzlei-php c1 10250 https://www.kanzlei-php.de/images/2021/1_Logos/PHP_Logo_mit_Claim_neg.svg
+OK kanzlei-php c2 28073 https://www.kanzlei-php.de/images/2021/opengraph.png
+OK kanzlei-php c3 5430 https://www.kanzlei-php.de/favicon.ico
+ERR dte-dellentechnik orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/43fd19fc-582e-4b50-88bf-ad0f6333acb6_dte-logo
+OK dte-dellentechnik c0 2177 http://dte-dellentechnik.de/wp-content/uploads/2025/04/dte-logo-ws-300x175.png
+OK dte-dellentechnik c1 11429 http://dte-dellentechnik.de/wp-content/uploads/2025/04/dte-logo.png
+OK dte-dellentechnik c2 6196 http://dte-dellentechnik.de/wp-content/uploads/2025/04/dte-logo-gr-300x175.png
+OK dte-dellentechnik c3 75346 http://dte-dellentechnik.de/wp-content/uploads/2026/07/Dellentechnik-stuttgart-leistungen.webp
+OK dte-dellentechnik c4 842 https://dte-dellentechnik.de/wp-content/uploads/2025/04/cropped-cropped-dte_logo-32x32.png
+OK dte-dellentechnik c5 4488 https://dte-dellentechnik.de/wp-content/uploads/2025/04/cropped-cropped-dte_logo-192x192.png
+ERR page-kraft orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/d02a04de-9ed7-4422-8b88-b488958bd87d_Bildschi
+OK page-kraft c0 114114 https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=1200&h=630&q=80
+OK page-kraft c1 295 https://page-kraft.de/favicon.svg
+ERR life-heroes orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/5d17bcba-bc95-430b-875e-45e356ac3dec_Logo_202
+OK life-heroes c0 215068 https://life-heroes.de/ai/img_res/eb57c1a5-bf1e-4c2f-b70a-f24a558a8469.png
+ERR seidel-hausmeisterservice orig HTTP Error 404: Not Found https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/a1e1bdb3-712d-47e7-8a44-19acb12d8ce8_Bildschi
+OK seidel-hausmeisterservice c0 11133 https://unternehmen.11880.com/wp-content/uploads/2023/03/logo-vector-white.svg
+OK seidel-hausmeisterservice c1 10627 https://unternehmen.11880.com/wp-content/uploads/2023/03/logo-color.svg
+OK seidel-hausmeisterservice c2 50822 https://unternehmen.11880.com/wp-content/uploads/2023/12/MS_Exchange.webp
+OK seidel-hausmeisterservice c3 12516 https://unternehmen.11880.com/wp-content/uploads/2023/11/alle_apps.webp
+OK seidel-hausmeisterservice c4 16929 https://unternehmen.11880.com/wp-content/uploads/2026/02/Tuev_Nord_Abstand.png
+OK seidel-hausmeisterservice c5 1208 https://unternehmen.11880.com/wp-content/uploads/2022/07/cropped-cropped-logo-32x32.png

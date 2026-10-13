@@ -1,0 +1,1040 @@
+<!doctype html>
+
+<html lang="de-de">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#efefef">
+<script>window.MSInputMethodContext && document.documentMode && document.write('<script src="/templates/inside-21/js/ie11.min.js"><\x2fscript>');</script>
+
+<style>
+
+/* titillium-web-regular - latin */
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/templates/inside-21/fonts/titillium-web-v9-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'),
+       url('/templates/inside-21/fonts/titillium-web-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/templates/inside-21/fonts/titillium-web-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/templates/inside-21/fonts/titillium-web-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/templates/inside-21/fonts/titillium-web-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/templates/inside-21/fonts/titillium-web-v9-latin-regular.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
+/* titillium-web-700 - latin */
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/templates/inside-21/fonts/titillium-web-v9-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Titillium Web Bold'), local('TitilliumWeb-Bold'),
+       url('/templates/inside-21/fonts/titillium-web-v9-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/templates/inside-21/fonts/titillium-web-v9-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/templates/inside-21/fonts/titillium-web-v9-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('/templates/inside-21/fonts/titillium-web-v9-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/templates/inside-21/fonts/titillium-web-v9-latin-700.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
+
+
+/*******************************VARIABLEN*************************************/
+
+.visually-hidden {display:none}
+
+:root {
+  --schwarz: #1D1D1B;
+  --blau: #00a6e2;
+  --braun: #4f412f;
+  --font: "Titillium Web", "Arial", "Sans-Serif";
+  --duenn: 400;
+  --dick: 700;
+  --width: 85%;
+  --mobilewidth: 88%;
+  --maxwidth: 1080px;
+  --sanft: all linear .3s;
+}
+
+.desktop {display:block}
+.mobile {display:none}
+
+html {height:100%;margin:0;padding:0;}
+body {
+	padding: 				0px;
+	margin: 				0px;
+	font-family: 			var(--font);
+	font-size: 				13pt;
+	line-height:			1.4;
+	background-color: 		#FFF;
+	color:					#4f412f;
+	height:					100%;
+}
+@media only screen and (max-width: 1460px) {body{font-size:12pt}}
+@media only screen and (max-width: 1140px) {body{font-size:11pt}}
+@media only screen and (max-width: 1060px) {body{font-size:11pt}}
+
+
+.container, .item-page {
+	position:			relative;
+	background-color:	transparent;
+	height:				auto;
+	padding:	        0px;
+	margin: 			0px auto!important;
+  width: var(--width)!important;
+  max-width: var(--maxwidth)!important
+}
+
+
+h1 {font-size: 2em;line-height:1.1;margin:0 0 50px}
+.item-page h1 {margin-bottom:0px}
+h1.counter, h1.counti {font-size:2.5em}
+h2 {font-size: 2em;line-height:1.2;margin-top:10px}
+h2 small {font-size:.5em; font-weight:var(--duenn);display:inline;}
+h3 {font-size: 1.5em;line-height:1.2;font-weight:var(--dick)}
+h4 {font-size: 1em;line-height:1.3;font-weight:var(--dick)}
+.drittel h3 {margin:10px 0 20px}
+h1.blau, h2.blau, h3.blau, p.blau, a.blau {color:var(--blau);background:transparent}
+/*h1.blau {margin-bottom:-15px}*/
+h3, h4 {margin: 0}
+a {color: #4f412f;text-decoration:none;}
+
+p {font-size: 1.5em;line-height:1.35;color: #4f412f;}
+.drittel p, .viertel p, .fuenftel p {font-size:1em;padding: 0 7%;}
+
+small {display:block;font-size:1em;line-height:1.4;margin:8px 0;/*color:var(--blau)*/}
+small a {color:var(--blau)}
+
+.blau {background:var(--blau);color:#fff;}
+.braun {background:var(--braun);color:#fff}
+.grau {background:#f0ece8;}
+.blau p, .braun p, .blau h3, .blau a {color:#fff}
+
+span.blau {display:block;color:var(--blau);background:transparent}
+
+ul {list-style:none;}
+
+
+/******************* Logo **********************/
+
+.oben {
+	position: 			fixed;
+	background:			#fff;
+  top:            0;
+	margin:				  0px auto;
+	padding-top:		0px;
+	width:				  100%;
+	height:				  90px;
+	text-align:			center;
+	z-index:			  17;}
+
+.oben .container {width:95%;max-width:1280px }
+
+.logo img {border: none; float: left;height:35px;margin:29px 0 0 0px}
+
+/******************************   mENÜ    ***********************************/
+
+ul.nav {position:absolute;text-align:left;right:0;top:20px;margin:0;padding:0;list-style:none}
+ul.nav li {padding-top:13px; display:inline-block;}
+ul.nav li.item-127, ul.nav li.item-128 {display:none}
+ul.nav li a {font-size:1em;padding-left:25px}
+ul.nav li a.button {background:var(--blau);color:#fff;padding:1px 6px;margin-left:20px;border-radius:2px;transition:var(--sanft)}
+ul.nav li a:hover, ul.nav li.active a {color:var(--blau);transition:var(--sanft)}
+ul.nav li a.button:hover {background:#fff;color:var(--blau);transition:var(--sanft)}
+ul.nav li.active a.button {color:#fff}
+/********************************   lOGIK    ********************************/
+.reihe {box-sizing: border-box;margin:0 auto;padding:50px 0;width:100%;max-width:100%}
+.klein {max-width:800px;width:80%}
+.klein.niederlassung {max-width:900px;width:90%;padding:25px 0}
+.full {width:100%;}
+.nospace {padding:20px 0 0}
+.flex {display: flex; justify-content: flex-start; align-items: stretch;}
+.flex.center {justify-content: center;align-items: center;}
+.flex.top {justify-content: flex-start;}
+.halb, .drittel, .fuenftel {box-sizing:border-box;}
+.halb {width:50%;padding:25px;float:left;}
+.fuenfzig .halb {padding:10px}
+.flex .halb {flex: 0 0 50%;}
+.halb.abstand {border:5px solid #fff}
+.drittel {width:32%;margin-right:2%;float:left;}
+.zweidrittel {width:66%;margin:0;float:right}
+.fuenftel {width:19%;margin-right:1.25%;float:left;}
+.drittel:nth-of-type(3n+3), .fuenftel:nth-of-type(5){margin-right:0;float:right}
+
+.siebzig .drittel {margin-top:25px}
+.einsfuenf .drittel {font-size:1.5em}
+
+.reihe::after, .drittel:nth-of-type(3)::after, .fuenftel:nth-of-type(5)::after{content:'';display:table;clear:both;}
+
+.siebzig {width:80%;margin:0 auto;}
+.sechzig {width:75%;margin:0 auto;}
+.fuenfzig {width:60%;margin:0 auto}
+.quadrat{float:left;padding:0!important}
+.quadrat.braun {margin-bottom:50px}
+.quadrat:before {content: "";display:block;padding-top: 100%;}
+/*.quadrat img {position:absolute;top:80px;width:50%;}*/
+.fuenftel.quadrat{position:relative;}
+.fuenftel.quadrat div {box-sizing:border-box;height:auto;width:100%;padding:25px 20px 0}
+.fuenftel.quadrat:nth-of-type(2) {float:left}
+.fuenftel.quadrat img {position:relative;top:0px;margin:0 auto 0px}
+/*.fuenftel.quadrat img.icon {margin-top:36px}*/
+/*.quadrat:nth-of-type(2) {float:right}*/
+.quadrat div {height:280px;/*max-width:300px*/}
+
+.drittel.quadrat div {padding:25px 10% 0}
+.item-page .drittel.quadrat a:hover {text-decoration:none!important}
+
+.halb.foto {padding:0}
+.halb.foto img {object-fit: cover;object-position: center;height:100%;}
+
+.halb.padding{padding:75px 10%}
+.zentriert {text-align: center}
+.linksbuendig {text-align:left}
+
+.clear {clear:both;height:1px;width:100%}
+
+/****************** MENÜ *******************/
+
+/****************************** DIREKT KONTAKT *******************************/
+.direkt {position:fixed;float:right;top:140px;right:0;height:180px;overflow:visible;z-index:1017}
+.direkt ul, .direkt ul li{list-style:none;width:220px;margin:0;padding:0}
+.direkt ul li {margin-bottom:50px;line-height:1.85}
+.direkt .icon {font-size:12pt;box-sizing: border-box;display:block;width:255px; height:70px;background-color:var(--blau);padding: 5px 0 0 36px;margin: 0 0 10px 185px;color:#fff;transition: var(--sanft)}
+
+.direkt .icon:hover {transition: var(--sanft)}
+  .icon.tel {background:url(/images/2021/2_Icons_Kommunikation/Icon_Tel.svg) var(--blau) no-repeat left;background-size:35px}
+  .icon.not {background:url(/images/2021/2_Icons_Kommunikation/Icon_Notruf.svg) var(--blau) no-repeat left;background-size:35px}
+  .icon.mail {background:url(/images/2021/2_Icons_Kommunikation/Icon_Mail.svg) var(--blau) no-repeat left;background-size:35px}
+
+.direkt .icon.tel:hover{margin:0 0 10px -35px;}
+.direkt .icon.not:hover{margin:0 0 10px 100px;}
+.direkt .icon.mail:hover{margin:0 0 10px -35px;}
+
+.direkt .icon a {color:#fff}
+
+/*******************************  FIX OPTIK  **********************************/
+.halb.grau.zentriert.abstand {padding: 50px 10%}
+
+/********************* CONTENT ************************/
+.headerfoto {padding-top:90px;width:100%;margin-bottom:35px}
+.headerfoto .item-image {width:100%;background-size: cover!important;background-position: center!important;}
+
+.item-image {position:relative;min-height:575px;margin:0;}
+.schnickeldipeng137ratzfatz-wumms .item-image {position:relative;min-height:760px;margin:0;}
+.bildlogo {position:absolute;max-width:660px;width:100%;height:250px;top:125px;left:50%;transform:translateX(-50%);text-align: center;}
+.schnickeldipeng137ratzfatz-wumms .bildlogo {top:205px}
+.bildlogo img {max-width:500px;margin:0 auto}
+.item-image .caption {position:relative;margin:75px auto 0;max-width:700px;width:100%;height:150px;font-size:2.25em;font-weight:var(--dick);color:#fff;line-height:1.3;text-align:center;}
+
+.item-page {text-align:center}
+.item-page strong {font-weight:var(--dick);}
+
+.item-page img, .item-page .halb img, .full img {max-width:100%;}
+.item-page img.icon, .item-page .klein.niederlassung .drittel img.icon {width:65px}
+.item-page img.icon.xxl {width:150px!important}
+.item-page .drittel img.icon {width:125px}
+.item-page .klein .drittel img.icon {width: 90px}
+.item-page .fuenfzig .halb img.icon {width:50px}
+.item-page .foto img {object-fit: cover;width:100%;height:100%}
+.item-page img.fullsize {width:100%}
+
+.niederlassung .drittel {width:28%}
+.niederlassung .drittel:first-of-type {color:var(--blau);font-size:2em;font-weight:var(--dick);width:40%;padding-top:58px}
+.niederlassung .drittel:first-of-type small {display:inline-block;font-size:0.65em;font-weight:400;}
+
+.item-page a {text-decoration:none;}
+.item-page a:hover {text-decoration: underline;}
+
+.item-page ul {list-style:none;margin:0;padding:0;}
+.item-page ul li {margin-left:10px}
+.item-page ul li::before{display:block;float:left;margin:0 0 0 -10px;content:'_ ';}
+.item-page ul ul {margin:0 0 15px 0;padding:0;}
+.item-page ul ul li {background: none;}
+
+.item-page a.button {display:inline-block; border:2px solid var(--blau);padding:4px 12px;color:#fff;background:var(--blau);font-weight:var(--dick);margin-bottom:20px;transition:var(--sanft)}
+.item-page a.button:hover {background:#fff;color:var(--blau);transition:var(--sanft)}
+.item-page .grau a.button:hover {border: 2px solid #e2dbd6}
+
+.item-page .custom .siebzig a.button {margin-bottom:25px}
+
+/****************** Toggle mit Radio Box *******************/
+
+.toggle-box {
+  display: none;
+}
+
+
+.toggle-box + label,
+[type="reset"]{
+  position:relative;
+  cursor: pointer;
+  text-align:left;
+  box-sizing: border-box;
+  line-height:1.1;
+  border-top:1px solid var(--braun);
+    height:90px;
+    display: block;
+    color: var(--braun);
+    padding:20px 0 0 100px;
+    font-size:1em;
+    font-weight:var(--dick);
+    cursor: pointer;
+  }
+
+  [type="reset"] {
+    font-family: var(--font);
+    vertical-align: top;
+    border: none;
+    width: 100%;
+    height: 74px;
+    margin: 0;
+    outline:0 !important;
+    background: transparent;
+    padding:0px 0 0 100px;
+    font-size:1em;
+    font-weight:var(--dick);
+    border-top:1px solid var(--braun);
+  }
+
+[type="reset"] span {display:block;height:74px;}
+[type="reset"] span span {height:auto;}
+
+
+.toggle-box + label[for=fachkompetenz]::before,
+.toggle-box + label[for=outsourcing]::before,
+.toggle-box + label[for=effizienz]::before,
+.toggle-box + label[for=einheit]::before,
+.toggle-box + label[for=umsatz]::before,
+.toggle-box + label[for=schaden]::before,
+.toggle-box + label[for=soforthilfe]::before,
+.toggle-box + label[for=schulung]::before,
+.toggle-box + label[for=management]::before,
+.toggle-box + label[for=regulierung]::before,
+.toggle-box + label[for=reduktion]::before,
+.toggle-box + label[for=digital]::before,
+.toggle-box + label[for=analytics]::before,
+.toggle-box + label[for=ersatz]::before,
+.toggle-box + label[for=legal]::before{display:block;width:55px;height:67px;margin:-20px 0 -45px -100px}
+
+
+button.outsourcing::before,
+button.effizienz::before,
+button.fachkompetenz::before,
+button.einheit::before,
+button.umsatz::before,
+button.schaden::before,
+button.soforthilfe::before,
+button.ersatz::before,
+button.schulung::before,
+button.management::before,
+button.regulierung::before,
+button.reduktion::before,
+button.digital::before,
+button.analytics::before,
+button.legal::before{display:block;width:55px;height:67px;margin:0px 0 -45px -100px}
+
+.toggle-box + label[for=schaden]::before,
+ button.schaden::before
+ {content:'';background:url(/images/2021/4_Services_Startseite/1_Schadenmanagement.svg) no-repeat}
+
+.toggle-box + label[for=soforthilfe]::before,
+ button.soforthilfe::before
+ {content:'';background:url(/images/2021/4_Services_Startseite/2_Soforthilfe.svg) no-repeat}
+
+.toggle-box + label[for=management]::before,
+ button.management::before
+ {content:'';background:url(/images/2021/4_Services_Startseite/3_Tech_Schadenmanagement.svg) no-repeat}
+
+.toggle-box + label[for=regulierung]::before,
+ button.regulierung::before
+ {content:'';background:url(/images/2021/4_Services_Startseite/4_Schadenregulierung.svg) no-repeat}
+
+.toggle-box + label[for=digital]::before,
+button.digital::before
+ {content:'';background:url(/images/2021/4_Services_Startseite/5_Digital_Service.svg) no-repeat}
+
+.toggle-box + label[for=analytics]::before,
+ button.analytics::before
+ {content:'';background:url(/images/2021/4_Services_Startseite/6_Data_Analytics.svg) no-repeat}
+
+.toggle-box + label[for=legal]::before,
+ button.legal::before
+ {content:'';background:url(/images/2021/4_Services_Startseite/7_Legal_Services.svg) no-repeat}
+
+.toggle-box + label[for=schulung]::before,
+button.schulung::before
+{content:'';background:url(/images/2021/4_Services_Startseite/1_Schulung.svg) no-repeat}
+
+.toggle-box + label[for=ersatz]::before,
+button.ersatz::before
+{content:'';background:url(/images/2021/4_Services_Startseite/2_Soforthilfe.svg) no-repeat}
+
+.toggle-box + label[for=reduktion]::before,
+button.reduktion::before
+{content:'';background:url(/images/2021/4_Services_Startseite/4_Schadenregulierung.svg) no-repeat}
+
+.toggle-box + label[for=outsourcing]::before,
+button.outsourcing::before
+{content:'';background:url(/images/2021/11_Services_Mobility/1_Mob_Outsourcing.svg) no-repeat}
+
+.toggle-box + label[for=effizienz]::before,
+button.effizienz::before
+{content:'';background:url(/images/2021/11_Services_Mobility/2_Mob_Effizienz.svg) no-repeat}
+
+.toggle-box + label[for=fachkompetenz]::before,
+button.fachkompetenz::before
+{content:'';background:url(/images/2021/11_Services_Mobility/3_Mob_Outsourcing.svg) no-repeat}
+
+.toggle-box + label[for=einheit]::before,
+button.einheit::before
+{content:'';background:url(/images/2021/11_Services_Mobility/4_Mob_Einheit.svg) no-repeat}
+
+.toggle-box + label[for=umsatz]::before,
+button.umsatz::before
+{content:'';background:url(/images/2021/11_Services_Mobility/5_Mob_Umsatz_Max.svg) no-repeat}
+
+
+.toggle-box + label + button {
+  display:none;
+}
+
+.toggle-box:checked + label {
+  display:none;
+}
+
+.toggle-box:checked + label + button {
+  display:block;
+}
+
+.toggle-box + label + button + div, .toggle-box + label + button + div + div {
+  display: none;
+  margin-bottom: 15px;
+  margin-left: 0px;
+}
+
+.toggle-box:checked + label + button + div {
+  display: block;
+box-sizing: border-box;
+  width:100%;
+text-align:left;
+    opacity: 1;
+    margin-top:-5px;
+    padding: 0 0 15px 0;
+font-size:1em;
+  color: #111;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+#schaden:checked + label + button + div {margin-top:30px!important}
+.toggle-box:checked + label + button + div p {font-size:1em}
+/***************************   Top Themen  ***********************************/
+
+.news.flex {display: flex; justify-content:flex-start; flex-wrap: wrap;}
+.news.blau, .moduletable.blau, .archiv.blau {background:transparent}
+.archiv .news-item {margin-bottom:20px;padding-bottom:0;min-height:300px;}
+.archiv .news-item .halb {padding:0;width:50%;}
+.archiv .news-item .halb.flex {min-height:300px;padding:0;align-items:center;justify-content: center;}
+.topnews {display:flex;flex: 0 0 32%;box-sizing: border-box;align-items: stretch;padding-right:15px;margin-bottom:15px}
+.topnews:nth-of-type(3n+3) {padding-right:0;}
+.news-item {
+	box-sizing:	border-box;
+  flex-grow: 1;
+	flex-direction: column;
+  display: flex;
+  justify-content: left;
+	align-items: flex-start;
+  /*align-items: center;*/
+  transition:all linear 0.35s;
+  background:var(--braun); color:#fff;
+  padding-bottom:25px;
+}
+.blau .news-item {background:var(--blau)}
+.blau .news-item:hover {background:rgb(144, 194, 219)}
+.top-themen .news-item a {display:block;width:100%}
+.news-item a:hover {text-decoration: none;}
+.news-item:hover {background:rgb(105, 93, 75)}
+.item-page .mod-articles-image,
+.newsflash-image {width:100%;margin:0;padding:0;height:300px;min-height:300px;overflow:hidden}
+.item-page .newsflash-image img, .item-page .mod-articles-image img {object-fit: cover;width:100%;height:300px;margin-bottom:-7px;object-position: center}
+.top-themen .item-page .newsflash-image img {object-fit: cover;width:100%;height:300px;margin-bottom:-7px;object-position: center; aspect-ratio: 4 / 3;min-width:371px;}
+.newstitel {font-size:1.45em;padding: 0 5%;line-height:1.2;font-weight:var(--dick);margin:22px 0;color:#fff}
+.intro {font-size:1em;padding: 0 10% 20px;line-height:1.3;color:#fff}
+
+a.back {display:block;margin-top:45px;color:var(--blau)}
+
+
+/*********************************   FORMULAR   *******************************/
+
+.convertforms {margin:25px auto 0!important;padding-bottom:0}
+
+input.cf-input::placeholder, textarea.cf-input::placeholder  {color: #333!important; opacity: 1!important}
+
+input.cf-input {color: var(--blau)!important}
+
+.convertforms.cf-success .cf-response {background-color: var(--blau)!important}
+
+.anfrage-formular .drittel {width:25%}
+.anfrage-formular .drittel img {width:100%}
+.anfrage-formular .drittel p {padding:0;font-size:1.5em}
+.vierfuenftel {width: 73%;float:right;box-sizing: border-box;padding: 25px 40px 40px}
+.bfQuickMode input[type=text], .bfQuickMode textarea, .bfQuickMode select, .bfQuickMode .uneditable-input {border:none!important;margin:7px 0!important;padding:9px 14px!important;font-family:var(--font)!important;font-size:1em;max-width: 95%!important}
+
+.btn {font-family:var(--font)!important;float:left!important;width:98.25%;padding:9px 0;text-align:center;background:var(--blau);color:#fff;border:1px solid var(--blau);margin:7px 0;font-weight:var(--dick);font-size:1em;letter-spacing: .5px}
+
+.btn:hover{cursor:pointer;background:#fff;color:var(--blau);border:1px solid var(--blau)}
+
+
+/***********************************   LOGIN   ********************************/
+#login-form-107, .form-validate {width:85%;max-width:800px;margin:0 auto 150px;padding:20px 20px 105px;border:1px solid var(--blau);border-radius:3px;}
+.form-validate {display:none}
+.form-validate fieldset {border:none}
+.controls {width:400px;max-width:90%;margin:0 auto;}
+.controls div {margin: 14px 0;text-align: left;}
+.controls span.add-on, .control-label {display: inline-block;width:150px;}
+input.form-control {border:1px solid var(--blau); padding:4px 7px; background: #fff;color:var(--blau);border-radius:2px;margin-top:20px}
+ul.unstyled, ul.nav-stacked {display:none}
+.mod-login__remember {margin-top:12px}
+.mod-login__submit {width:100%;text-align:center}
+#login-form-107 .btn {max-width:185px;margin:20px auto!important;float:none!important}
+#system-message-container {position:absolute;top:0;width:100%;text-align:center}
+.alert-warning {position:relative;margin:250px auto 100px;width:85%;max-width:800px;padding:50px 20px;border:1px solid var(--braun);border-radius:3px;}
+.alert-warning h4 {margin-bottom:35px}
+.alert-warning a.close {display:none}
+.login {height:85vh;}
+#login-form-107 ul li {list-style:none}
+.input-password-toggle {display:none}
+.login .item-page ul li::before {display:none}
+/***********************************  Footer  *********************************/
+.unten .container {width:50%!important;max-width:500px!important;padding-bottom:35px}
+.unten {margin:40px 0 20px;color:#4f412f;font-weight:var(--duenn);padding-left:25px;font-size:.85em;}
+.unten .moduletable.sm {width:10%;float:left;padding-top:5px}
+.unten .moduletable p {font-size:1em;margin:0;padding:0;line-height:1.5}
+.unten ul.nav {position:relative;width:45%;float:left;margin:0px 0 0;padding:0;right:auto;top:0}
+.unten ul.nav li {display:block;padding-top:0;height:20px}
+.unten ul.nav li a, .unten ul.nav li a.button {font-size:1em;padding-left:0;margin-left:0;background:transparent;color:#4f412f}
+.unten ul.nav li.item-128, .unten ul.nav li.item-128 a.hidden {display:inline-block;}
+.unten ul.nav li.item-162 {display:none}
+
+/******************************************  RESPONSIVE PART  *****************************************************/
+@media only screen and (max-width: 900px)
+{
+.desktop, .oben ul.nav, #desktop {display:none}
+.mobile {display:block}
+
+.js #menu{display:none}
+.js .slicknav_menu{display:block}
+.slicknav_menu{z-index:999;position:fixed;display:block;width:100%;top:0;background-color:#fff;font-size:16px;box-sizing:border-box;padding:5px;overflow:hidden}
+.slicknav_btn{position:relative;display:block;vertical-align:middle;float:right;padding:.538em .625em;line-height:1.125em;cursor:pointer;margin:5px 9px 6px;text-decoration:none;text-shadow:none;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:var(--blau)}
+.slicknav_btn .slicknav_icon-bar+.slicknav_icon-bar{margin-top:.188em}
+.slicknav_menu{*zoom:1}
+.slicknav_menu .slicknav_menutxt{display:block;line-height:1.188em;float:left;color:#fff;font-weight:300;text-shadow:none}
+.slicknav_menu .slicknav_icon{float:left;width:1.125em;height:.875em;margin:.188em 0 0 .438em}
+.slicknav_menu .slicknav_icon:before{background:transparent;width:1.125em;height:.875em;display:block;content:"";position:absolute}
+.slicknav_menu .slicknav_no-text{margin:0}
+.slicknav_menu .slicknav_icon-bar{display:block;width:1.125em;height:.125em;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px}
+.slicknav_menu:before{content:" ";display:table}
+.slicknav_menu:after{content:" ";display:table;clear:both}
+.slicknav_nav .slicknav_arrow{display:block;font-size:.8em;margin:-2px 3px 0 .4em;float:right;}
+.slicknav_nav .slicknav_item{cursor:pointer}
+.slicknav_nav .slicknav_item a{display:inline;padding:0;margin:0}
+.slicknav_menu *{box-sizing:border-box}
+.slicknav_menu .slicknav_icon-bar{background-color:#fff}
+#scrollbar {position:fixed;top:60px;bottom:0;left:0;right:0;background:#fff;}
+#scrollbar div {position:absolute;display:flex;justify-content: center;align-items: center;overflow:auto;top:0;bottom:0;left:0;right:0;}
+.slicknav_nav{top:65px;width:100%;bottom:0;left:0;right:0;padding:0px;color:#333;margin:0;font-size:.875em;list-style:none;}
+.slicknav_nav ul{list-style:none;overflow:hidden;padding:0;margin:0 0 0 20px}
+.slicknav_nav .slicknav_row{padding:9px 15px;margin:0px 5px}
+.slicknav_nav .slicknav_row:hover{-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#eee;color:#666}
+.slicknav_nav a{text-align:left;display:block;padding:12px 15px;margin:0px 5px;text-decoration:none;color:#333;font-size:1.2em;line-height:14pt;}
+.slicknav_nav a:hover{-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;background:#eee;color:#666}
+.slicknav_nav .slicknav_txtnode{margin-left:15px}
+.slicknav_nav .slicknav_parent-link a{display:inline;padding:0;margin:0}
+.slicknav_open .slicknav_icon:before {position:absolute;z-index:1003;content:'✕';font-family: 'Arial', sans-serif; color:var(--blau);margin:-2px 0 0 0px;font-size:1.5em;}
+.slicknav_open .slicknav_icon:after {content:'';background:#FFF;display:block;position:fixed;top:0px;left:0px;width:100%;height:70px;transition:all linear 0.5s}
+.slicknav_open .slicknav_icon-bar {display:none;}
+.slicknav_menu {overflow: visible}
+
+.container, .item-page {width:var(--mobilewidth)}
+
+.oben {height:49px;top:0;width:80%;z-index:1001}
+html {height:auto;}
+body {height:auto;font-size: 				11pt;}
+.logo {height:50px;}
+.logo img {border: none; float: left;height:25px;margin:15px 0 0 2.5%}
+.headerfoto .item-image {background:url(/images/2021/10_Fotos/autobahn-von-oben-s.jpg)}
+.quadrat img {top:60px}
+ul.nav{top:12px;right:8px}
+ul.nav li {padding-top:6px}
+.item-image .caption {height:50px}
+.halb, .drittel, .fuenftel, .zweidrittel, .vierfuenftel, .anfrage-formular .drittel, .niederlassung .drittel, .niederlassung .drittel:first-of-type  {float:none;margin:0;width:100%;flex:none}
+.drittel {margin-bottom:25px}
+.drittel.braun {padding-bottom:15px}
+.siebzig .drittel {margin-top: 25px;float:left;width:45%;margin-right:5%}
+.niederlassung .drittel:first-of-type {padding-top:40px;padding-bottom:15px}
+.flex {flex:none;display:block;justify-content:flex-start; align-items: flex-start;}
+.flex.top {align-items: center;justify-content: center}
+.flex.halb, .blau.flex {display:flex;}
+
+.full .quadrat img {width:100%}
+.siebzig, .sechzig, .fuenfzig {width:100%;}
+.halb .foto {min-height:auto!important;height:auto!important}
+.halb .foto, .halb .blau.flex.center {border:none!important}
+.klein {max-width:100%;width:100%;}
+.reihe {padding:25px}
+.reihe .reihe {padding:0}
+.fuenftel.quadrat:nth-of-type(2), .quadrat:nth-of-type(2), .fuenftel:nth-of-type(5){}
+.fuenftel.quadrat {float:left;width:48%;margin:5px 1%;}
+.quadrat div {max-width: 100%}
+.quadrat.braun div {width:75%;max-width:75%}
+.item-image, .schnickeldipeng137ratzfatz-wumms .item-image {margin:54px 0 0;min-height:340px;}
+.bildlogo, .schnickeldipeng137ratzfatz-wumms .bildlogo {width:50%;height:150px;top:75px}
+.item-image .caption {position:relative;top:auto;margin:45px auto 0;width:80%;font-size:1.25em;width:100%;left: 0%; transform: translateX(0%); }
+.headerfoto {padding-top:0}
+.item-page img.icon {width:100px}
+.fuenftel.quadrat div {padding:0 15px}
+.fuenftel.quadrat img.icon {margin-top:0px}
+.topnews {width:100%;padding-right:0}
+.newsflash-image {height:250px}
+.newsflash-image img {max-width:100%;height:250px}
+.reihe img.fullsize {width:calc(100% + 50px);margin-left:-25px}
+h1 {font-size:2.5em;}
+h2 {font-size:2em}
+h2.mobsmall {font-size:1.3em}
+h3 {font-size:1.35em;}
+small {font-size:.9em;}
+.datenschutz .reihe.klein {padding:25px 0; font-size:.70em;}
+.unten {padding-left:0}
+.unten .container {width:var(--mobilewidth); max-width: var(--mobilewidth)}
+.unten .custom {width: 50%}
+.unten ul.nav {width: 40%}
+.unten ul.nav li {padding:3px 0}
+}
+</style>
+
+<meta charset="utf-8">
+	<meta property="og:title" content="Ihr Kfz-Schadenmanagement">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="https://www.kanzlei-php.de/images/2021/opengraph.png">
+	<meta property="og:url" content="https://www.kanzlei-php.de/">
+	<meta property="og:site_name" content="PHP Schadenklasse">
+	<meta property="og:description" content="Der Erfolgsweg für Ihr Kfz-Schadenmanagement">
+	<meta name="description" content="Der Erfolgsweg für Ihr Kfz-Schadenmanagement">
+	<title>PHP Schadenklasse – Ihr Kfz-Schadenmanagement</title>
+	<link href="/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
+<link href="/media/mod_articles/css/mod-articles.min.css?9f6c39" rel="stylesheet">
+	<link href="/media/mod_menu/css/mod-menu.min.css?a45ede" rel="stylesheet">
+	<link href="/media/vendor/joomla-custom-elements/css/joomla-alert.min.css?0.4.1" rel="stylesheet">
+	<link href="/media/plg_system_jcepro/site/css/content.min.css?86aa0286b6232c4a5b58f892ce080277" rel="stylesheet">
+<script type="application/json" class="joomla-script-options new">{"joomla.jtext":{"ERROR":"Fehler","MESSAGE":"Nachricht","NOTICE":"Hinweis","WARNING":"Warnung","SUCCESS":"Success","JCLOSE":"Schließen","JOK":"OK","JOPEN":"Öffnen"},"system.paths":{"root":"","rootFull":"https:\/\/www.kanzlei-php.de\/","base":"","baseFull":"https:\/\/www.kanzlei-php.de\/"},"csrf.token":"fe622554d5158f30695183073f10f608"}</script>
+	<script src="/media/system/js/core.min.js?a3d8f8"></script>
+	<script src="/media/mod_menu/js/menu.min.js?5a565f" type="module"></script>
+	<script src="/media/system/js/joomla-hidden-mail.min.js?80d9c7" type="module"></script>
+	<script src="/media/system/js/messages.min.js?9a4811" type="module"></script>
+	<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.kanzlei-php.de/#/schema/Organization/base","name":"PHP Schadenklasse","url":"https://www.kanzlei-php.de/"},{"@type":"WebSite","@id":"https://www.kanzlei-php.de/#/schema/WebSite/base","url":"https://www.kanzlei-php.de/","name":"PHP Schadenklasse","publisher":{"@id":"https://www.kanzlei-php.de/#/schema/Organization/base"}},{"@type":"WebPage","@id":"https://www.kanzlei-php.de/#/schema/WebPage/base","url":"https://www.kanzlei-php.de/","name":"PHP Schadenklasse – Ihr Kfz-Schadenmanagement","description":"Der Erfolgsweg für Ihr Kfz-Schadenmanagement","isPartOf":{"@id":"https://www.kanzlei-php.de/#/schema/WebSite/base"},"about":{"@id":"https://www.kanzlei-php.de/#/schema/Organization/base"},"inLanguage":"de-DE"},{"@type":"Article","@id":"https://www.php-schadenklasse.de/#/schema/com_content/article/7","name":"Ihr Kfz-Schadenmanagement","headline":"Ihr Kfz-Schadenmanagement","inLanguage":"de-DE","thumbnailUrl":"images/2021/10_Fotos/baeume-strasse-s.jpg","image":"images/2021/10_Fotos/baeume-strasse.jpg","isPartOf":{"@id":"https://www.php-schadenklasse.de/#/schema/WebPage/base"}}]}</script>
+
+
+<link rel="shortcut icon" href="/favicon.ico" />
+
+</head>
+
+<body class="front ihr-kfz-schadenmanagement ">
+
+<div class="oben"><div class="container">
+  <!-- LOGO START -->
+  <div class="logo">
+    <a href="/"><img src="/templates/inside-21/images/PHP_Logo_braun.svg" alt="Kanzlei PHP" /></a>
+  </div>
+   <ul id="menu" class="mod-menu mod-list nav ">
+<li class="nav-item item-123"><a href="/index.php/portrait" >Portrait</a></li><li class="nav-item item-162"><a href="/index.php/top-themen" >News</a></li><li class="nav-item item-124"><a href="/index.php/autohaus" >Autohaus</a></li><li class="nav-item item-125"><a href="/index.php/flotte" >Flotte</a></li><li class="nav-item item-126"><a href="/index.php/mobility-services" >Mobility Services</a></li><li class="nav-item item-184"><a href="https://schadenaufnahmetool.kanzlei-php.de/" class=" button">Login</a></li></ul>
+
+  <!-- LOGO ENDE -->
+</div></div>
+
+  <!-- KONTAKT ICONS START -->
+    <div class="direkt">
+      <ul><li class="icon tel"><a href="tel:+4971146053722">Stuttgart: +49 711 460 537 22</a><br><a href="tel:+4971316186899">Heilbronn: +49 7131 618 68 99 &nbsp;</a></li>
+      <!--<li><a href="#" class="icon not">Notruf!</a></li>-->
+      <li class="icon mail"><a href="mailto:info@php-schadenklasse.de">info@php-schadenklasse.de</a><br><a href="mailto:unfall@php-schadenklasse.de">unfall@php-schadenklasse.de  &nbsp;</a></li></ul>
+    </div>
+
+
+  <!-- KONTAKT ICONS ENDE -->
+
+	<!-- INHALT START -->
+      <div id="system-message-container" aria-live="polite"></div>
+
+      <div class="headerfoto">
+  					<div class=" desktop pull-left item-image" style="background-image: url(/images/2021/10_Fotos/baeume-strasse.jpg);">
+			<div class="bildlogo"><img src="/images/2021/1_Logos/PHP_Logo_mit_Claim_neg.svg" alt="PHP - Die neue Schadensklasse" />
+				<h1 class="title caption">Der Erfolgsweg für Ihr Kfz-Schadenmanagement</h1>			</div>
+		</div>
+  	<div class=" mobile pull-left item-image" style="background-image: url(/images/2021/10_Fotos/baeume-strasse-s.jpg);">
+			<div class="bildlogo"><img src="/images/2021/1_Logos/PHP_Logo_mit_Claim_neg.svg" alt="PHP - Die neue Schadensklasse" />
+				<h1 class="title caption">Der Erfolgsweg für Ihr Kfz-Schadenmanagement</h1>			</div>
+		</div>
+	</div>
+<div class="com-content-article item-page" itemscope itemtype="https://schema.org/Article">
+    <meta itemprop="inLanguage" content="de-DE">
+    
+    
+        
+        
+    
+    
+        
+                                    <div itemprop="articleBody" class="com-content-article__body">
+        <div class="reihe">
+<div class="drittel quadrat blau flex top"><a href="/index.php/autohaus">
+<div><img src="/images/2021/3_Icons_Bereiche/Icon_Autohaus_neg.svg" alt="Icon" width="128" height="80" class="icon" />
+<h3>Autohaus</h3>
+<p>Nutzen Sie die Potenziale für Ihr Autohaus: PHP bietet Ihnen und Ihren Kunden erstklassiges, hochmodernes und rechtssicheres Management von Unfallschäden.</p>
+</div>
+</a></div>
+<div class="drittel quadrat blau flex top"><a href="/index.php/flotte">
+<div><img src="/images/2021/3_Icons_Bereiche/Icon_Flotte_neg.svg" alt="Icon" width="128" height="80" class="icon" />
+<h3>Flotte</h3>
+<p>Genießen Sie ein neues Service-Level für das Schadenmanagement Ihrer <br />Fahrzeugflotte. Generieren Sie neue Mehrwerte für Ihr Unternehmen!</p>
+</div>
+</a></div>
+<div class="drittel quadrat blau flex top"><a href="/index.php/mobility-services">
+<div><img src="/images/2021/3_Icons_Bereiche/Icon_Mobility_Services_neg.svg" alt="Icon" width="128" height="80" class="icon" />
+<h3>Mobility Services</h3>
+<p>Profitieren Sie von modernsten Mobilitätsdienstleistungen für Ihre Kunden mit dem PHP-Expertennetzwerk an Ihrer Seite.</p>
+</div>
+</a></div>
+</div>
+<div class="clear">&nbsp;</div>
+<div class="reihe grau">
+<div class="sechzig"><br />
+<h1>Die PHP-Premium-Services<br />für Kfz-Schäden</h1>
+<p>Wir managen Kfz-Schäden.<br />Effizient, rechtssicher und mit Mehrwert für Sie.</p>
+<p>&nbsp;</p>
+<form>
+<div class="halb"><input name="radio" type="radio" id="schaden" class="toggle-box" /> <label for="schaden">Schadenmanagement: <span class="blau">Transparent, rechtssicher, aktiv</span></label> <button type="reset" class="schaden"><span>Schadenmanagement: <span class="blau">Transparent, rechtssicher, aktiv</span></span></button>
+<div>
+<p>Wir ermöglichen Ihnen jederzeit den Zugriff auf das vollumfängliche Fachwissen unseres Expertennetzwerks. Durch unsere modularen Leistungsbausteine erfüllen wir Ihre individuellen Anforderungen und schaffen gemeinsam einen erstklassigen Schadenprozess.</p>
+</div>
+<input name="radio" type="radio" id="digital" class="toggle-box" /> <label for="digital">Digital Service: <span class="blau">Mit neuester Technik</span></label> <button type="reset" class="digital"><span>Digital Service: <span class="blau">Mit neuester Technik</span></span></button>
+<div>
+<p>Unsere Schadens-App sowie die digitale Schadensplattform ermöglicht es uns, Ihr Unternehmen individuell und effizient in die Schadenabwicklungsprozesse zu integrieren.</p>
+</div>
+<input name="radio" type="radio" id="analytics" class="toggle-box" /> <label for="analytics">Data Analytics: <span class="blau">Überblick per Doppelklick</span></label> <button type="reset" class="analytics"><span>Data Analytics: <span class="blau">Überblick per Doppelklick</span></span></button>
+<div>
+<p>Wir analysieren und visualisieren Ihre Schadenmanagement-Kennzahlen maßgeschneidert. Hieraus generieren wir Optimierungspotenziale für Ihr Unternehmen und schaffen höchste Transparenz.</p>
+</div>
+</div>
+<div class="halb"><input name="radio" type="radio" id="legal" class="toggle-box" /> <label for="legal">Legal Services: <span class="blau">Für Ihre Sicherheit</span></label> <button type="reset" class="legal"><span>Legal Services: <span class="blau">Für Ihre Sicherheit</span></span></button>
+<div>
+<p>Durch unser breit aufgestelltes Netzwerk aus Schadenmanagern, Verkehrs- und Wirtschaftsjuristen sowie Juristen für Versicherungsrecht bieten wir Ihnen gebündelt unser Expertenwissen an. Daher ist es uns möglich, z.B. die Prüfung der Car Policy, Prozessanalysen oder sonstige Beratungsmandate innerhalb Ihrer Flotte zu übernehmen. Wir stehen Ihnen als kompetente Rechtsdienstleister zu allen juristischen Fragen rund um die Themen Flotte, Autohaus und Schaden zur Verfügung.</p>
+</div>
+<input name="radio" type="radio" id="schulung" class="toggle-box" /> <label for="schulung">Schulungen / Seminare: <span class="blau">Gut zu wissen</span></label> <button type="reset" class="schulung"><span>Schulungen / Seminare: <span class="blau">Gut zu wissen</span></span></button>
+<div>
+<p>Inhouse-Schulungen und Seminare zu den Themen ganzheitliche Schadenabwicklung, Autovermietung und Prozessoptimierung werden durch unsere Fachanwälte für Versicherungs- und Verkehrsrecht angeboten.</p>
+</div>
+</div>
+</form></div>
+</div>
+<div class="clear">&nbsp;</div>
+<div class="reihe">
+<h2>PS-starke Informationen rund um <br />das Schadenmanagement<br /><br /></h2>
+<div class="moduletable ">
+        
+        <div class="news flex">
+                        <article class="topnews flex top" itemscope itemtype="https://schema.org/Article">
+
+                                    <div class="mod-articles-item-content news-item">
+
+                        
+                        
+                       
+
+                        
+                        
+                       
+
+	
+							<a href="/index.php?view=article&amp;id=55:internationale-zustaendigkeit-bei-schadensersatzansprueche-aus-abgetretenem-recht&amp;catid=11">
+
+							                             <figure class=" mod-articles-image item-image">
+            <img src="/images/news/2021/2021-04-news-hammer-teaser.jpg" width="350" height="325" loading="lazy">        </figure>
+                        	
+							<div class='newstitel'>Urteil zum Thema "Internationale Zuständigkeit bei Schadensersatzansprüche aus abgetretenem Recht "</div>							<div class='intro'>PHP Rechtsanwälte erzielen erneut einen Erfolg am Landgericht Stuttgart zur Thematik "Zuständigkeit von deutschen Gerichten"</div>
+		  												
+						  	</a>
+
+                        
+
+                        
+                                            </div>
+                            </article>
+                            <article class="topnews flex top" itemscope itemtype="https://schema.org/Article">
+
+                                    <div class="mod-articles-item-content news-item">
+
+                        
+                        
+                       
+
+                        
+                        
+                       
+
+	
+							<a href="/index.php?view=article&amp;id=53:erstattung-von-mietwagenkosten&amp;catid=11">
+
+							                             <figure class=" mod-articles-image item-image">
+            <img src="/images/news/2021/2021-04-news-hammer-teaser.jpg" width="350" height="325" loading="lazy">        </figure>
+                        	
+							<div class='newstitel'>Urteil zur Erstattung von Mietwagenkosten</div>							<div class='intro'>PHP Rechtsanwälte hat ein bemerkenswertes Urteil am Landgericht Heilbronn zur Erstattung von Mietwagenkosten erstritten</div>
+		  												
+						  	</a>
+
+                        
+
+                        
+                                            </div>
+                            </article>
+                            <article class="topnews flex top" itemscope itemtype="https://schema.org/Article">
+
+                                    <div class="mod-articles-item-content news-item">
+
+                        
+                        
+                       
+
+                        
+                        
+                       
+
+	
+							<a href="/index.php?view=article&amp;id=52:grosskunderabatt-auf-den-wiederbeschaffungswert-6&amp;catid=11">
+
+							                             <figure class=" mod-articles-image item-image">
+            <img src="/images/news/2021/2021-04-news-hammer-teaser.jpg" width="350" height="325" loading="lazy">        </figure>
+                        	
+							<div class='newstitel'>Urteil u.a. zum Thema Großkundenrabatt</div>							<div class='intro'>PHP Rechtsanwälte erstreiten Urteil am Landgericht Dortmund zur Thematik "Großkundenrabatt"</div>
+		  												
+						  	</a>
+
+                        
+
+                        
+                                            </div>
+                            </article>
+                            <article class="topnews flex top" itemscope itemtype="https://schema.org/Article">
+
+                                    <div class="mod-articles-item-content news-item">
+
+                        
+                        
+                       
+
+                        
+                        
+                       
+
+	
+							<a href="/index.php?view=article&amp;id=48:grosskunderabatt-auf-den-wiederbeschaffungswert-3&amp;catid=11">
+
+							                             <figure class=" mod-articles-image item-image">
+            <img src="/images/news/2021/2021-04-news-hammer-teaser.jpg" width="350" height="325" loading="lazy">        </figure>
+                        	
+							<div class='newstitel'>Urteil u.a. zum Thema Aktivlegitimation und Abzug ersparter Eigenaufwendungen</div>							<div class='intro'>PHP Rechtsanwälte erstreiten Urteil am Amtsgericht Öhringen zur Thematik "Mietwagenkosten"</div>
+		  												
+						  	</a>
+
+                        
+
+                        
+                                            </div>
+                            </article>
+                            <article class="topnews flex top" itemscope itemtype="https://schema.org/Article">
+
+                                    <div class="mod-articles-item-content news-item">
+
+                        
+                        
+                       
+
+                        
+                        
+                       
+
+	
+							<a href="/index.php?view=article&amp;id=47:grosskunderabatt-auf-den-wiederbeschaffungswert-2&amp;catid=11">
+
+							                             <figure class=" mod-articles-image item-image">
+            <img src="/images/news/2021/2021-04-news-hammer-teaser.jpg">        </figure>
+                        	
+							<div class='newstitel'>Urteil zum Thema Großkunderabatt bei konkreter Abrechnung</div>							<div class='intro'>PHP Rechtsanwälte erstreiten Urteil am Amtsgericht Stuttgart zur Thematik "Abzug Großkundenrabatt bei konkreter Abrechnung"</div>
+		  												
+						  	</a>
+
+                        
+
+                        
+                                            </div>
+                            </article>
+                            <article class="topnews flex top" itemscope itemtype="https://schema.org/Article">
+
+                                    <div class="mod-articles-item-content news-item">
+
+                        
+                        
+                       
+
+                        
+                        
+                       
+
+	
+							<a href="/index.php?view=article&amp;id=46:php-feiert-jubilaeum&amp;catid=11">
+
+							                             <figure class="none mod-articles-image item-image">
+            <img src="/images/news/2021/10-jahre-kleiner.png">        </figure>
+                        	
+							<div class='newstitel'>Happy Birthday!</div>							<div class='intro'>Die PHP feiert Ihr 10 jähriges Firmenjubiläum</div>
+		  												
+						  	</a>
+
+                        
+
+                        
+                                            </div>
+                            </article>
+        </div>
+</div>
+</div>
+<div class="reihe">
+<h2>Wovon Sie profitieren<br /><br /></h2>
+<div class="fuenftel quadrat blau flex top">
+<div><img src="/images/2021/5_Vorteile_Startseite/1_Mitarbeiter_Entlastung.svg" alt="Icon" width="70" height="70" class="icon" />
+<h4>Mitarbeiter- Entlastung</h4>
+</div>
+</div>
+<div class="fuenftel quadrat blau flex top">
+<div><img src="/images/2021/5_Vorteile_Startseite/2_Verhandlungen_Augenhoehe.svg" alt="Icon" width="70" height="70" class="icon" />
+<h4>Verhandlungen mit Versicherern auf Augenhöhe</h4>
+</div>
+</div>
+<div class="fuenftel quadrat blau flex top">
+<div><img src="/images/2021/5_Vorteile_Startseite/3_Rechtssicherheit.svg" alt="Icon" width="70" height="70" class="icon" />
+<h4>Rechts-<br />sicherheit</h4>
+</div>
+</div>
+<div class="fuenftel quadrat blau flex top">
+<div><img src="/images/2021/5_Vorteile_Startseite/4_Ersparnis.svg" alt="Icon" width="70" height="70" class="icon" />
+<h4>Zeit- und Kosten-ersparnis</h4>
+</div>
+</div>
+<div class="fuenftel quadrat blau flex top">
+<div><img src="/images/2021/5_Vorteile_Startseite/5_Reporting.svg" alt="Icon" width="70" height="70" class="icon" />
+<h4>Reporting Mehrwertanalysen</h4>
+</div>
+</div>
+</div>
+<div class="clear">&nbsp;</div>
+<div class="reihe grau zentriert">
+<div class="reihe klein zentriert">
+<h2>Erstklassige Spezialisten für Ihr Schadenmanagement</h2>
+<p>Spezialisierte Fachanwälte für Verkehrs- und Versicherungsrecht, Top Schadenmanager und Versicherungskaufleute mit Kernkompetenzen der Unfallschadenbearbeitung: Unsere Verkehrsrechtsexperten mit Sitz in Stuttgart, Berlin und Heilbronn beraten und begleiten Sie bei allen Aspekten des modernen Schadenmanagements.</p>
+<br /><br />
+<div class="drittel"><img src="/images/icons/unfall.svg" alt="Schadenfälle" class="icon" />
+<h1 class="blau counter">45.000</h1>
+<p class="blau"><strong>Schadenfälle</strong></p>
+<p>Regulierungserfahrung aus ca. 45.000 Schadenfällen p.a.</p>
+</div>
+<div class="drittel"><img src="/images/icons/auto.svg" alt="Schadenfälle" class="icon" />
+<h1 class="blau counter">140.000</h1>
+<p class="blau"><strong>Fahrzeuge</strong></p>
+<p>Regulierungsverantwortung für 140.000 Fahrzeuge</p>
+</div>
+<div class="drittel"><img src="/images/icons/schaden.svg" alt="Schadenfälle" class="icon" />
+<h1 class="blau counti"><span class="counter">115</span> Mio.</h1>
+<p class="blau"><strong>Schadenvolumen in €</strong></p>
+<p>Reguliertes Schadenvolumen i.H.v. 115 Mio. € p.a.</p>
+</div>
+</div>
+<img src="/images/2021/10_Fotos/berglandschaft.jpg" alt="Fakten" class="fullsize" /> <div class="moduletable ">
+        
+<div id="mod-custom98" class="mod-custom custom">
+    <div class="reihe">
+<div class="fuenfzig">
+<h2>Freie Fahrt für unseren Dialog.<br />Was können wir für Sie tun?</h2>
+<p>Vereinbaren Sie einen unverbindlichen Gesprächstermin. Online und gerne vor Ort.<br />Wir freuen uns über Ihren Anruf oder Ihre <span style="white-space: nowrap;">E-Mail.</span></p>
+<br /><br /> <a href="/index.php/kontakt/anfrage-formular" class="button">Jetzt Termin vereinbaren</a></div>
+<p>&nbsp;</p>
+<div class="moduletable ">
+        
+<div id="mod-custom140" class="mod-custom custom">
+    <div class="reihe klein niederlassung">
+<div class="drittel"><small>Standort</small> Stuttgart</div>
+<div class="drittel"><img src="/images/icons/telefon.svg" alt="Telefon" class="icon" /><small><a href="tel:+4971146053722" class="blau">0711-46053722</a></small></div>
+<div class="drittel"><img src="/images/icons/email.svg" alt="E-Mail" class="icon" /><small><joomla-hidden-mail  is-link="1" is-email="1" first="aW5mbw==" last="a2FuemxlaS1waHAuZGU/c3ViamVjdD1BbmZyYWdlJTIwJUMzJUJDYmVyJTIwZGllJTIwV2Vic2l0ZQ==" text="aW5mb0BrYW56bGVpLXBocC5kZQ==" base=""  class="blau">Diese E-Mail-Adresse ist vor Spambots geschützt! Zur Anzeige muss JavaScript eingeschaltet sein.</joomla-hidden-mail></small></div>
+</div></div>
+</div>
+<div class="moduletable ">
+        
+<div id="mod-custom141" class="mod-custom custom">
+    <div class="reihe klein niederlassung">
+<div class="drittel"><small>Standort</small> Heilbronn</div>
+<div class="drittel"><img src="/images/icons/telefon.svg" alt="Telefon" class="icon" /><small><a href="tel:+4971316186899" class="blau">07131-6186899</a></small></div>
+<div class="drittel"><img src="/images/icons/email.svg" alt="E-Mail" class="icon" /><small><joomla-hidden-mail  is-link="1" is-email="1" first="dW5mYWxs" last="a2FuemxlaS1waHAuZGU/c3ViamVjdD1BbmZyYWdlJTIwJUMzJUJDYmVyJTIwZGllJTIwV2Vic2l0ZQ==" text="dW5mYWxsQGthbnpsZWktcGhwLmRl" base=""  class="blau">Diese E-Mail-Adresse ist vor Spambots geschützt! Zur Anzeige muss JavaScript eingeschaltet sein.</joomla-hidden-mail></small></div>
+</div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="clear">&nbsp;</div>    </div>
+
+        
+                                                            </div>
+
+    <!-- INHALT ENDE -->
+
+    <div class="unten"><div class="container">
+     <div class="moduletable  desktop">
+        <ul id="desktop" class="mod-menu mod-list nav ">
+<li class="nav-item item-123"><a href="/index.php/portrait" >Portrait</a></li><li class="nav-item item-162"><a href="/index.php/top-themen" >News</a></li><li class="nav-item item-124"><a href="/index.php/autohaus" >Autohaus</a></li><li class="nav-item item-125"><a href="/index.php/flotte" >Flotte</a></li><li class="nav-item item-126"><a href="/index.php/mobility-services" >Mobility Services</a></li><li class="nav-item item-184"><a href="https://schadenaufnahmetool.kanzlei-php.de/" class=" button">Login</a></li></ul>
+</div>
+<div class="moduletable ">
+        <ul id="mod-menu95" class="mod-menu mod-list nav ">
+<li class="nav-item item-132"><a href="/index.php/top-themen" >News</a></li><li class="nav-item item-129"><a href="/index.php/kontakt" >Kontakt</a></li><li class="nav-item item-156"><a href="http://php-schadenklasse.de/index.php/kontakt#standorte" >Standorte</a></li><li class="nav-item item-130"><a href="/index.php/impressum" >Impressum</a></li><li class="nav-item item-131"><a href="/index.php/datenschutz" >Datenschutz</a></li></ul>
+</div>
+<div class="moduletable  sm">
+        
+<div id="mod-custom96" class="mod-custom custom">
+    <p><a href="https://www.linkedin.com/company/php-rechtsanwaltsgesellschaft" target="_blank" rel="noopener"><img src="/images/2021/8_Social_Icons/LinkedIn.svg" alt="LinkedIn" width="25" height="25" /></a> &nbsp; <a href="https://www.xing.com/pages/php-rechtsanwaltsgesellschaft" target="_blank" rel="noopener"><img src="/images/2021/8_Social_Icons/Xing.svg" alt="LinkedIn" width="25" height="25" /></a></p></div>
+</div>
+
+     <div class="clear"></div>
+   </div></div>
+
+   <script src="/templates/inside-21/js/jquery.min.js"></script>
+
+   <!-- SMARTPHONE MENÜ -->
+   <script src="/templates/inside-21/js/jquery.slicknav.js"></script>
+   <script>
+   jQuery(document).ready(function(){
+   	jQuery('#menu').slicknav({init: function(){ addDivContainer(); } });
+   });
+   function addDivContainer(){
+   	jQuery(".slicknav_nav").wrap('<div id="scrollbar" style="display:none"><div></div></div>');
+   	}
+   </script>
+
+
+     <!-- Counter Up Script -->
+     <script src="/templates/inside-21/js/waypoints.js"></script>
+     <script src="/templates/inside-21/js/jquery.counterup.min.js"></script>
+     <script>
+     jQuery('.counter').counterUp({
+         delay: 10,
+         time: 1500
+     });
+     </script>
+
+
+</body>
+</html>
