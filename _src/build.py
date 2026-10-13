@@ -122,7 +122,7 @@ PARTNERS = [
     ("V-A-O", "https://v-a-o.de/kosten/", "/assets/img/partner/v-a-o.webp"),
     ("SV Rot 1945", "https://www.sv-rot-1945.de", "/assets/img/partner/sv-rot-1945.webp"),
     ("STD Textildruck", "https://textildruck-1a.com/", "/assets/img/partner/std-textildruck.webp"),
-    ("Tamam Design", "https://www.tamamdesign.de/", None),
+    ("Spektra Werbung", "https://www.tamamdesign.de/", "/assets/img/partner/spektra-werbung.webp"),
     ("Fix Reguliert", None, None),
     ("AH Geiger", "https://www.ah-geiger.de/", "/assets/img/partner/ah-geiger.webp"),
     ("Rechtsanwaltskanzlei Esslingen", "https://www.rechtsanwaltskanzlei-esslingen.de/", "/assets/img/partner/rechtsanwaltskanzlei-esslingen.webp"),
