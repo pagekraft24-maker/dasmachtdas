@@ -11,7 +11,7 @@ ICONS = os.path.join(SRC, "icons")
 SITE = "https://dasmachtdas.de"
 TODAY = "2026-10-13"
 import hashlib
-VER = hashlib.md5(b"".join(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", d, f), "rb").read() for d, f in (("css", "site.css"), ("js", "site.js")))).hexdigest()[:8]
+VER = hashlib.md5(b"".join(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", d, f), "rb").read() for d, f in (("css", "site.css"), ("js", "site.js"))) + open(os.path.abspath(__file__), "rb").read()).hexdigest()[:8]
 
 E = html.escape
 TEL = "tel:01792033399"
@@ -135,8 +135,8 @@ PARTNERS = [
     ("DTE Dellentechnik", "https://dte-dellentechnik.de/", "/assets/img/partner/dte-dellentechnik.webp"),
     ("Page Kraft", "https://page-kraft.de", "/assets/img/partner/page-kraft.webp"),
     ("Life Heroes", "https://www.life-heroes.de/", "/assets/img/partner/life-heroes.webp"),
-    ("Classic Analytics", "https://www.classic-analytics.de/de", "/assets/img/partner-classic-analytics.webp"),
-    ("SV Timmerman", "https://sv-timmerman.de", "/assets/img/partner-sv-timmerman.webp"),
+    ("Classic Analytics", "https://www.classic-analytics.de/de", "/assets/img/partner/classic-analytics.webp"),
+    ("SV Timmerman", "https://sv-timmerman.de", "/assets/img/partner/sv-timmerman.webp"),
 ]
 
 JOBS = [
@@ -554,9 +554,8 @@ def kontakt():
 def partners():
     tiles = []
     for name, url, src in PARTNERS:
-        sq = ' class="sq"' if src and any(k in src for k in ("sv-rot", "v-a-o", "sbw-gmbh", "emox", "sv-timmerman", "std-textildruck")) else ""
-        if src and "esslingen" in src: sq = ' class="wide"'
-        im = f'<img src="{src}" alt="{E(name)}"{sq} loading="lazy" decoding="async">' if src else f'<span class="partner__name">{E(name)}</span>'
+        cls = ' class="pl-' + os.path.splitext(os.path.basename(src))[0] + '"' if src else ""
+        im = f'<img src="{src}" alt="{E(name)}"{cls} loading="lazy" decoding="async">' if src else f'<span class="partner__name">{E(name)}</span>'
         if url:
             tiles.append(f'<a class="partner" href="{url}" target="_blank" rel="noopener noreferrer" title="{E(name)}">{im}</a>')
         else:
@@ -848,6 +847,33 @@ def manifest():
                       ensure_ascii=False, indent=2)
 
 
+def partner_css():
+    from PIL import Image
+    LOWQ = {"emox-elektro": 40, "svk-partner": 50, "v-a-o": 66, "sv-rot-1945": 60, "kanzlei-php": 40, "ergo-versicherung": 50, "sbw-gmbh": 58, "std-textildruck": 60, "dte-dellentechnik": 54}
+    rules = []
+    for name, url, src in PARTNERS:
+        if not src:
+            continue
+        slug = os.path.splitext(os.path.basename(src))[0]
+        fp = os.path.join(OUT, src.lstrip("/"))
+        if fp.endswith(".svg"):
+            vb = re.search(r'viewBox="([^"]+)"', open(fp, encoding="utf-8").read()).group(1).split()
+            w, h, natural = float(vb[2]), float(vb[3]), 9999
+        else:
+            w, h = Image.open(fp).size
+            natural = w
+        r = w / h
+        area = 6800
+        width = (area * r) ** 0.5
+        height = width / r
+        maxh = LOWQ.get(slug, 64)
+        if height > maxh:
+            width = maxh * r
+        width = min(width, 168, natural / 1.2 if natural < 9999 else 168)
+        rules.append(f".partner img.pl-{slug}{{width:{width:.0f}px}}")
+    return "\n".join(rules) + "\n"
+
+
 # ---------------------------------------------------------------- write
 def clean(html_text):
     # remove helper markers used during authoring
@@ -865,6 +891,8 @@ def main():
         os.makedirs(d, exist_ok=True)
         for f in glob.glob(os.path.join(SRC, "assets", sub, "*")):
             shutil.copy2(f, d)
+    with open(os.path.join(OUT, "assets", "css", "site.css"), "a", encoding="utf-8") as fh:
+        fh.write("\n/* partner logo sizing (generated) */\n" + partner_css())
     pages = {"index.html": page_index(), "jobs.html": page_jobs(), "impressum.html": page_impressum(),
              "datenschutz.html": page_datenschutz(), "404.html": page_404()}
     for name, content in pages.items():

@@ -342,10 +342,8 @@ a.ccard:hover{transform:translateY(-3px);box-shadow:var(--shadow-soft),inset 0 0
 
 /* ---------- Partner ---------- */
 .partners{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.6rem}
-.partner{display:grid;place-items:center;aspect-ratio:16/9;padding:1.1rem 1.3rem;border-radius:1.3rem;background:var(--surface);box-shadow:inset 0 0 0 1px var(--hair);transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
-.partner img{max-height:2.6rem;width:auto;max-width:78%;object-fit:contain}
-.partner img.sq{max-height:3.6rem}
-.partner img.wide{max-width:92%}
+.partner{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;padding:1.1rem 1.3rem;border-radius:1.3rem;background:var(--surface);box-shadow:inset 0 0 0 1px var(--hair);transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.partner img{display:block;height:auto;max-width:90%;margin:auto;object-fit:contain}
 .partner__name{font-family:var(--display);font-weight:700;font-stretch:104%;font-size:1rem;line-height:1.25;text-align:center;color:var(--ink-3);letter-spacing:-.01em;transition:color .6s var(--ease)}
 a.partner:hover .partner__name{color:var(--red)}
 .partner__name{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word;max-width:100%}
