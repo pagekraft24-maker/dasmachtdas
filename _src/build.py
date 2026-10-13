@@ -121,22 +121,20 @@ PARTNERS = [
     ("SBW GmbH", "https://sbwgmbh.de/partner-der-sbw/", "/assets/img/partner/sbw-gmbh.webp"),
     ("V-A-O", "https://v-a-o.de/kosten/", "/assets/img/partner/v-a-o.webp"),
     ("SV Rot 1945", "https://www.sv-rot-1945.de", "/assets/img/partner/sv-rot-1945.webp"),
-    ("STD Textildruck", "https://textildruck-1a.com/", None),
+    ("STD Textildruck", "https://textildruck-1a.com/", "/assets/img/partner/std-textildruck.webp"),
     ("Tamam Design", "https://www.tamamdesign.de/", None),
     ("Fix Reguliert", None, None),
-    ("AH Geiger", "https://www.ah-geiger.de/", None),
-    ("Rechtsanwaltskanzlei Esslingen", "https://www.rechtsanwaltskanzlei-esslingen.de/", None),
+    ("AH Geiger", "https://www.ah-geiger.de/", "/assets/img/partner/ah-geiger.webp"),
+    ("Rechtsanwaltskanzlei Esslingen", "https://www.rechtsanwaltskanzlei-esslingen.de/", "/assets/img/partner/rechtsanwaltskanzlei-esslingen.webp"),
     ("Steuerberater Louis", "https://www.steuerberater-louis.de/", "/assets/img/partner/steuerberater-louis.webp"),
-    ("Stickerplanet", None, None),
     ("Wipersoft", "https://wipersoft.de/", "/assets/img/partner/wipersoft.webp"),
     ("RH Anwaltskanzlei", "https://www.rh-anwaltskanzlei.de/", "/assets/img/partner/rh-anwaltskanzlei.webp"),
     ("Emox Elektro", "https://emox-elektro.de/", "/assets/img/partner/emox-elektro.webp"),
     ("RVR", "https://www.rvr.de/", "/assets/img/partner/rvr.svg"),
     ("Kanzlei PHP", "https://www.kanzlei-php.de", "/assets/img/partner/kanzlei-php.svg"),
     ("DTE Dellentechnik", "https://dte-dellentechnik.de/", "/assets/img/partner/dte-dellentechnik.webp"),
-    ("Page Kraft", "https://page-kraft.de", None),
+    ("Page Kraft", "https://page-kraft.de", "/assets/img/partner/page-kraft.webp"),
     ("Life Heroes", "https://www.life-heroes.de/", "/assets/img/partner/life-heroes.webp"),
-    ("Seidel Hausmeisterservice", "https://seidel-hausmeisterservice-stuttgart.de/", None),
     ("Classic Analytics", "https://www.classic-analytics.de/de", "/assets/img/partner-classic-analytics.webp"),
     ("SV Timmerman", "https://sv-timmerman.de", "/assets/img/partner-sv-timmerman.webp"),
 ]
@@ -556,7 +554,8 @@ def kontakt():
 def partners():
     tiles = []
     for name, url, src in PARTNERS:
-        sq = ' class="sq"' if src and any(k in src for k in ("sv-rot", "v-a-o", "sbw-gmbh", "emox", "sv-timmerman")) else ""
+        sq = ' class="sq"' if src and any(k in src for k in ("sv-rot", "v-a-o", "sbw-gmbh", "emox", "sv-timmerman", "std-textildruck")) else ""
+        if src and "esslingen" in src: sq = ' class="wide"'
         im = f'<img src="{src}" alt="{E(name)}"{sq} loading="lazy" decoding="async">' if src else f'<span class="partner__name">{E(name)}</span>'
         if url:
             tiles.append(f'<a class="partner" href="{url}" target="_blank" rel="noopener noreferrer" title="{E(name)}">{im}</a>')
