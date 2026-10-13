@@ -46,11 +46,9 @@
       });
       dots.forEach(function (b, k) { b.setAttribute("aria-current", k === i ? "true" : "false"); });
     }
-    function play() { stop(); if (!reduce) t = setInterval(function () { go(i + 1); }, 6000); }
+    function play() { stop(); if (!reduce) t = setInterval(function () { go(i + 1); }, 2000); }
     function stop() { if (t) clearInterval(t); t = null; }
     dots.forEach(function (b, k) { b.addEventListener("click", function () { go(k); play(); }); });
-    root.addEventListener("mouseenter", stop);
-    root.addEventListener("mouseleave", play);
     root.addEventListener("focusin", stop);
     root.addEventListener("focusout", play);
     go(0); play();

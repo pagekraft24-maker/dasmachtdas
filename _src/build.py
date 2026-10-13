@@ -10,7 +10,8 @@ OUT = os.path.join(ROOT, "public")
 ICONS = os.path.join(SRC, "icons")
 SITE = "https://dasmachtdas.de"
 TODAY = "2026-10-13"
-VER = "20261013"
+import hashlib
+VER = hashlib.md5(b"".join(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", d, f), "rb").read() for d, f in (("css", "site.css"), ("js", "site.js")))).hexdigest()[:8]
 
 E = html.escape
 TEL = "tel:01792033399"
@@ -38,11 +39,11 @@ def img(name, alt, w, h, sizes="100vw", lazy=True, cls="", has800=True, fetch=""
     return f'<img src="{src}"{srcset} alt="{E(alt)}" width="{w}" height="{h}"{load}{f}{c}>'
 
 
-LOGO = '<img src="/assets/img/das-logo.webp" alt="{alt}" width="800" height="214"{extra}>'
+LOGO = '<img src="/assets/img/{file}.webp" alt="{alt}" width="800" height="214"{extra}>'
 
 
-def logo(alt="D A S Logo", extra=' loading="lazy" decoding="async"'):
-    return LOGO.format(alt=E(alt), extra=extra)
+def logo(alt="D A S Logo", extra=' loading="lazy" decoding="async"', variant="das-logo"):
+    return LOGO.format(file=variant, alt=E(alt), extra=extra)
 
 
 def btn(href, text, ic, cls="btn--red", ext=False, extra=""):
@@ -113,30 +114,29 @@ GV = [
 ]
 AREAS = ["Stuttgart-Mitte", "Stuttgart-Nord", "Stuttgart-Süd", "Stuttgart-Ost", "Stuttgart-West", "Bad Cannstatt", "Feuerbach", "Vaihingen", "Ludwigsburg", "Esslingen", "Böblingen", "Sindelfingen", "Leonberg", "Korntal", "Filderstadt", "Leinfelden-Echterdingen", "Fellbach", "Waiblingen", "Kornwestheim", "Marbach"]
 
-PX = "https://sv-timmerman.de/project_files/3cfb8386-ed9a-472e-9aa6-0a809ab803c3/"
 PARTNERS = [
-    ("SVK Partner", "https://www.vfk-ev.de", PX + "06f701fe-c0a8-47d2-b381-4f87fa5adef7_svk-partner.png?v=5054a9948c0b057152c408c098d8de68"),
-    ("ERGO Versicherung", "https://danijel-aljic.ergo.de", PX + "0ea7dbb1-3209-473a-949b-b4f7a77763ca_2.png?v=c502eaaf5d4c7fa79f716a9e04b32f3e"),
-    ("ReSmart Group", "https://resmart-group.de", PX + "ca5d4b61-e3cc-41a3-b335-3758bb4b0354_Resmart_Logo_wide_Final-1-removebg-preview-768x156.png?v=7c82c48db13f46cf2fe99f9a14fab337"),
-    ("SBW GmbH", "https://sbwgmbh.de/partner-der-sbw/", PX + "29c1afbb-36e4-4e5e-8959-7f5efe418e65_1.png?v=c706d7bd353f87c1f67961e2918e8a8e"),
-    ("V-A-O", "https://v-a-o.de/kosten/", PX + "14f484bb-1af5-4ba2-b55c-fdb1c24d371a_3.png?v=22cb6ffe50573a5e27952cbea132a267"),
-    ("SV Rot 1945", "https://www.sv-rot-1945.de", PX + "ca3d3f7b-c8bb-4898-adf1-c2c5fec76e9e_kfz-sachverstaendiger-partner-10.png?v=e26e61f2b44096d1f91b4acd6dec84b7"),
-    ("STD Textildruck", "https://textildruck-1a.com/", PX + "237fb878-07a7-45a2-bb90-3066183e2e83_kfz-sachverstaendiger-partner-1.png?v=3412b8e0d1b95a77e1db22846dce89e2"),
-    ("Tamam Design", "https://www.tamamdesign.de/", PX + "858df8a8-7f4d-4477-9582-77e3a5221a88_kfz-sachverstaendiger-partner-2.png?v=298224025e8dd22c56819b6ed5f3c605"),
-    ("Fix Reguliert", None, PX + "0a016666-a56e-40be-894a-0b0c5e8c9850_kfz-sachverstaendiger-partner-3.png?v=a8fc7bf00b54e5b9ded833a5b7b4e0c0"),
-    ("AH Geiger", "https://www.ah-geiger.de/", PX + "42a48b46-5e35-42d5-8a72-96d3e1d5dfc9_kfz-sachverstaendiger-partner-4.png?v=3fc91c697a8e9f3b7e09efc923ec15af"),
-    ("Rechtsanwaltskanzlei Esslingen", "https://www.rechtsanwaltskanzlei-esslingen.de/", PX + "9d8f73b3-f3b6-419b-a408-7cb760a1c372_kfz-sachverstaendiger-partner-5-1.png?v=068be329a2dc4827fb15b59a37448a98"),
-    ("Steuerberater Louis", "https://www.steuerberater-louis.de/", PX + "3e37e9a6-aca9-4484-810c-774925373d46_kfz-sachverstaendiger-partner-6.png?v=66a4f1d63786486f1c7b4ea69db369bf"),
-    ("Stickerplanet", None, PX + "7fff1aa1-054b-4f64-a9ba-54943582656c_kfz-sachverstaendiger-partner-7.png?v=d8cbaf43e6072d747f329272b1884200"),
-    ("Wipersoft", "https://wipersoft.de/", PX + "291a202c-fc9e-4688-ba62-c1e04fd892da_kfz-sachverstaendiger-partner-8.png?v=d5f04df06623fdfaad3bdca2bf49be5c"),
-    ("RH Anwaltskanzlei", "https://www.rh-anwaltskanzlei.de/", PX + "82c9591f-39ac-46f6-b11b-bbce17431194_kfz-sachverstaendiger-partner-02.webp?v=2778afaf3a9cc4eaa1cce7d04beff8b3"),
-    ("Emox Elektro", "https://emox-elektro.de/", PX + "2042f5c8-ccd4-475b-9a6e-cc06c695b8fd_kfz-sachverstaendiger-partner-03.webp?v=e2b11eb862f3918b6b2633975bc7d209"),
-    ("RVR", "https://www.rvr.de/", PX + "1e2d9e6e-e285-4004-815c-7e3b159ca50e_kfz-sachverstaendiger-partner-04-1.webp?v=1004beae7f9385b8f0e3c32a55a17e9e"),
-    ("Kanzlei PHP", "https://www.kanzlei-php.de", PX + "f09f8087-da4d-4505-8d16-b2b116f41e95_PHP_Logo_braun.svg?v=9ef3c608e8c73622c3d440eb06d53b70"),
-    ("DTE Dellentechnik", "https://dte-dellentechnik.de/", PX + "43fd19fc-582e-4b50-88bf-ad0f6333acb6_dte-logo-ws-300x175.png?v=d20e72c4a67ce2c6671b813d65084e95"),
-    ("Page Kraft", "https://page-kraft.de", PX + "d02a04de-9ed7-4422-8b88-b488958bd87d_Bildschirmfoto-2026-05-01-um-17.32.53.png?v=9253f4de8af21808f6e6df77f708ab5e"),
-    ("Life Heroes", "https://www.life-heroes.de/", PX + "5d17bcba-bc95-430b-875e-45e356ac3dec_Logo_2026-1920w.webp?v=d05a730f13113e0ba5e59bb262975d12"),
-    ("Seidel Hausmeisterservice", "https://seidel-hausmeisterservice-stuttgart.de/", PX + "a1e1bdb3-712d-47e7-8a44-19acb12d8ce8_Bildschirmfoto-2026-06-09-um-23.22.57.png?v=cfdf8de000bedebb19d3cd21b28bb12b"),
+    ("SVK Partner", "https://www.vfk-ev.de", "/assets/img/partner/svk-partner.webp"),
+    ("ERGO Versicherung", "https://danijel-aljic.ergo.de", "/assets/img/partner/ergo-versicherung.svg"),
+    ("ReSmart Group", "https://resmart-group.de", "/assets/img/partner/resmart-group.webp"),
+    ("SBW GmbH", "https://sbwgmbh.de/partner-der-sbw/", "/assets/img/partner/sbw-gmbh.webp"),
+    ("V-A-O", "https://v-a-o.de/kosten/", "/assets/img/partner/v-a-o.webp"),
+    ("SV Rot 1945", "https://www.sv-rot-1945.de", "/assets/img/partner/sv-rot-1945.webp"),
+    ("STD Textildruck", "https://textildruck-1a.com/", None),
+    ("Tamam Design", "https://www.tamamdesign.de/", None),
+    ("Fix Reguliert", None, None),
+    ("AH Geiger", "https://www.ah-geiger.de/", None),
+    ("Rechtsanwaltskanzlei Esslingen", "https://www.rechtsanwaltskanzlei-esslingen.de/", None),
+    ("Steuerberater Louis", "https://www.steuerberater-louis.de/", "/assets/img/partner/steuerberater-louis.webp"),
+    ("Stickerplanet", None, None),
+    ("Wipersoft", "https://wipersoft.de/", "/assets/img/partner/wipersoft.webp"),
+    ("RH Anwaltskanzlei", "https://www.rh-anwaltskanzlei.de/", "/assets/img/partner/rh-anwaltskanzlei.webp"),
+    ("Emox Elektro", "https://emox-elektro.de/", "/assets/img/partner/emox-elektro.webp"),
+    ("RVR", "https://www.rvr.de/", "/assets/img/partner/rvr.svg"),
+    ("Kanzlei PHP", "https://www.kanzlei-php.de", "/assets/img/partner/kanzlei-php.svg"),
+    ("DTE Dellentechnik", "https://dte-dellentechnik.de/", "/assets/img/partner/dte-dellentechnik.webp"),
+    ("Page Kraft", "https://page-kraft.de", None),
+    ("Life Heroes", "https://www.life-heroes.de/", "/assets/img/partner/life-heroes.webp"),
+    ("Seidel Hausmeisterservice", "https://seidel-hausmeisterservice-stuttgart.de/", None),
     ("Classic Analytics", "https://www.classic-analytics.de/de", "/assets/img/partner-classic-analytics.webp"),
     ("SV Timmerman", "https://sv-timmerman.de", "/assets/img/partner-sv-timmerman.webp"),
 ]
@@ -302,7 +302,7 @@ def footer(home=True):
   <div class="wrap">
     <div class="footer__grid">
       <div>
-        <a class="logo-chip" href="/" aria-label="DAS GmbH – Startseite">{logo()}</a>
+        <a class="logo-free" href="/" aria-label="DAS GmbH – Startseite">{logo(variant="das-logo-light")}</a>
         <p class="footer__about">Ihr kompetenter Partner für Werkstatt, Gutachten und Fahrzeugservice in Stuttgart und Umgebung.</p>
       </div>
       <div><h4>Leistungen</h4><ul>{leist}</ul></div>
@@ -381,7 +381,7 @@ def services():
     return f"""<section class="section" id="leistungen">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="logo-chip">{logo()}</span>
+      <span class="logo-free">{logo()}</span>
       <h2 class="h-lg">Alles rund ums Auto <span class="red h-sub">– kompetent und aus einer Hand</span></h2>
     </div>
     <div class="bento">
@@ -402,7 +402,7 @@ def also():
     return f"""<section class="panel panel--red section" aria-labelledby="also-h">
   <div class="wrap">
     <div class="also-head rv">
-      <span class="logo-chip">{logo("DAS Logo")}</span>
+      <span class="logo-free">{logo("DAS Logo", variant="das-logo-white")}</span>
       <h2 class="h-lg" id="also-h">machen wir auch</h2>
     </div>
     <div class="also">{cards}</div>
@@ -440,7 +440,7 @@ def interactive():
     return f"""<section class="panel panel--dark section" id="interaktiv" data-ia>
   <div class="wrap">
     <div class="ia-head rv">
-      <span class="logo-chip ia-logo">{logo()}</span>
+      <span class="logo-free ia-logo">{logo(variant="das-logo-light")}</span>
       <h2 class="h-lg">Alles aus einer Hand</h2>
     </div>
     <div class="ia">
@@ -490,7 +490,7 @@ def gutachten():
     return f"""<section class="section" id="gutachten">
   <div class="wrap">
     <div class="ga-title rv">
-      <span class="logo-chip">{logo()}</span>
+      <span class="logo-free">{logo()}</span>
       <h2 class="h-lg">Kostenvoranschlag? Vermittlung an einen unabhängigen Gutachter? <span class="inline-logo red">{logo("DAS")}kann beides!</span></h2>
     </div>
     <div class="ga">
@@ -556,7 +556,8 @@ def kontakt():
 def partners():
     tiles = []
     for name, url, src in PARTNERS:
-        im = f'<img src="{src}" alt="{E(name)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">'
+        sq = ' class="sq"' if src and any(k in src for k in ("sv-rot", "v-a-o", "sbw-gmbh", "emox", "sv-timmerman")) else ""
+        im = f'<img src="{src}" alt="{E(name)}"{sq} loading="lazy" decoding="async">' if src else f'<span class="partner__name">{E(name)}</span>'
         if url:
             tiles.append(f'<a class="partner" href="{url}" target="_blank" rel="noopener noreferrer" title="{E(name)}">{im}</a>')
         else:
@@ -654,7 +655,7 @@ def page_jobs():
     opts = "".join(f'<option value="{jid}">{E(t)}</option>' for jid, t, *_ in JOBS)
     body = header(False) + f"""<main id="main">
 <section class="jhero"><div class="jhero__frame">
-  <span class="logo-chip">{logo(extra=' decoding="async"')}</span>
+  <span class="logo-free">{logo(extra=' decoding="async"', variant="das-logo-light")}</span>
   <h1 class="h-xl">Werden Sie Teil des Teams</h1>
   <p class="lead">Wir suchen engagierte Fachkräfte, die mit Leidenschaft an modernen Fahrzeugen arbeiten und echte Lösungen für echte Menschen schaffen.</p>
 </div></section>
