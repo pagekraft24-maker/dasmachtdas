@@ -79,7 +79,7 @@ ALSO = [
 ]
 
 IA = [
-    ("motor", "Motor", "Motor & Diagnose", "Modernste Fahrzeugdiagnose mit Fehlerspeicher-Auslesung, Motoranalyse und umfassender technischer Prüfung. Wir finden jedes Problem – schnell und präzise.", "settings-3-line", 26, 53),
+    ("motor", "Motor", "Motor & Diagnose", "Modernste Fahrzeugdiagnose mit Fehlerspeicher-Auslesung, Motoranalyse und umfassender technischer Prüfung. Wir finden jedes Problem – schnell und präzise.", "settings-3-line", 73, 54),
     ("innenraum", "Innenraum", "Innenraum & Aufbereitung", "Professionelle Fahrzeugaufbereitung innen und außen, Lederpflege, Ozonbehandlung und Leasingrückgabe-Aufbereitung. Ihr Auto glänzt wie am ersten Tag.", "sparkling-line", 51, 59),
     ("fahrwerk", "Fahrwerk", "Fahrwerk & Achsvermessung", "Präzise Achs- und Rahmenvermessung mit modernster Lasertechnik. Fahrwerksprüfung und Stoßdämpferdiagnose für maximale Sicherheit und Fahrkomfort.", "steering-line", 27, 64),
     ("bremsen", "Bremsen", "Bremsen & Sicherheit", "Kompletter Bremsenservice: Prüfung, Wartung und Austausch von Bremsbelägen, -scheiben und -flüssigkeit. Ihre Sicherheit hat für uns höchste Priorität.", "alert-line", 82, 62),
