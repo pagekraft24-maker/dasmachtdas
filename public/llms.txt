@@ -1,0 +1,17 @@
+# DAS GmbH – Kfz-Werkstatt & Service in Stuttgart
+
+> Professionelle Kfz-Werkstatt in Stuttgart. Wartung, Reparatur, Gutachten, Fahrzeugservice, Reifenwechsel & mehr. Kostenvoranschlag direkt aus der Meisterwerkstatt, Vermittlung an unabhängige VfK-zertifizierte Gutachter.
+
+- Adresse: Heimsheimer Straße 29, 70499 Stuttgart-Weilimdorf
+- Telefon (24 h Service-Hotline): 0179 20 333 99
+- E-Mail: info@dasmachtdas.de
+- Öffnungszeiten: Montag – Freitag 08:00 – 17:00 Uhr, Samstag 11:00 – 14:00 Uhr
+
+## Seiten
+
+- [Startseite](https://dasmachtdas.de/): Leistungen (Gutachten & Bewertung, Technik, Werkstatt, Instandsetzungen, Radwechsel, Service), Über uns, Häufige Fragen, Kostenvoranschlag & Gutachter-Vermittlung, Kontakt, Partner
+- [Karriere](https://dasmachtdas.de/jobs): Offene Stellen und Bewerbung
+
+## Ausführlich
+
+- [llms-full.txt](https://dasmachtdas.de/llms-full.txt): Alle Inhalte der Website als Text
